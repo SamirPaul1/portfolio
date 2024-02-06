@@ -74,7 +74,7 @@ $$
 We also know that around 10 percent of our daily messages (100 million) are media files per our requirements. If we assume each file is 50 KB on average, we will require 5 TB of storage every day.
 
 $$
-100 \space million \times 100 \space KB = 5 \space TB/day
+100 \space million \times 50 \space KB = 5 \space TB/day
 $$
 
 And for 10 years, we will require about 19 PB of storage.
@@ -355,7 +355,7 @@ _For more details, refer to [Sharding](/courses/system-design/sharding) and [Con
 
 ### Mutual friends
 
-For mutual friends, we can build a social graph for every user. Each node in the graph will represent a user and a directional edge will represent followers and followees. After that, we can traverse the followers of a user to find and suggest a mutual friend. This would require a graph database such as [Neo4j](https://neo4j.com) and [ArangoDB](https://www.arangodb.com).
+For mutual friends, we can build a social graph for every user. Each node in the graph will represent a user and a directional edge will represent followers and followees. After that, we can traverse the followers of a user to find and suggest a mutual friend. This would require a graph database such as [Neo4j](https://neo4j.com) or [ArangoDB](https://www.arangodb.com).
 
 This is a pretty simple algorithm, to improve our suggestion accuracy, we will need to incorporate a recommendation model which uses machine learning as part of our algorithm.
 
